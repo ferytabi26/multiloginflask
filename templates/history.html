@@ -34,11 +34,11 @@
                 <tbody id="table_body">
                 {% for row in data %}
                     <tr>
-                        <td>{{ row[0] }}</td>
                         <td>{{ row[1] }}</td>
                         <td>{{ row[2] }}</td>
                         <td>{{ row[3] }}</td>
                         <td>{{ row[4] }}</td>
+                        <td>{{ row[5] }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>
@@ -47,8 +47,12 @@
         </div>
         <div class="row">
             <div class="col">
-                <a class="btn button-primary" id="prev" href="{{ url_for('get_new_data_kurang') }}">prev</a>
-                <a class="btn btn-outline-info" id="next" href="{{ url_for('get_new_data_tambah') }}">next</a>
+                <a class="btn button-primary arrow-button" id="prev" href="{{ url_for('get_new_data_kurang') }}">
+                    &#60;
+                </a>
+                <a class="btn button-primary arrow-button" id="next" href="{{ url_for('get_new_data_tambah') }}">
+                    &#62;
+                </a>
             </div>
         </div>
     </div>
