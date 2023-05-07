@@ -71,9 +71,9 @@ def handle_new_data():
 @app.route('/get_new_data_tambah')
 def get_new_data_tambah():
     global offset
-    offset += 5
+    offset += 10
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 5 OFFSET %s",[offset])
+    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 10 OFFSET %s",[offset])
     rows = mycursor.fetchall()
     mycursor.close()
     print(rows)
@@ -83,16 +83,16 @@ def get_new_data_tambah():
 @app.route('/get_new_data_kurang')
 def get_new_data_kurang():
     global offset
-    offset -= 5
-    if offset<5:
+    offset -= 10
+    if offset<10:
         offset = 0
         mycursor = mydb.cursor()
-        mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 5")
+        mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 10")
         rows = mycursor.fetchall()
         mycursor.close()
         return render_template('history.html',data=rows)
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 5 OFFSET %s",[offset])
+    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 10 OFFSET %s",[offset])
     rows = mycursor.fetchall()
     mycursor.close()
     return render_template('history.html',data=rows)
@@ -143,7 +143,7 @@ def login():
 @app.route('/history')
 def history():
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 5 OFFSET %s",[offset])
+    mycursor.execute("SELECT * FROM sensor ORDER BY id DESC LIMIT 10 OFFSET %s",[offset])
     rows = mycursor.fetchall()
     mycursor.close()
     print(rows)

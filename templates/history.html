@@ -13,14 +13,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col text-center mt-3">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-auto text-center mt-3 me-0">
                 <h1> Data Centre Monitoring Result</h1>
             </div>
+            <div class="col-auto">
+                <a class="btn btn-primary back" href="{{ url_for('home') }}" role="button"> &#60; BACK</a>
+            </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
             <div class="container">
-                <h2>Monitoring Result</h2>
                 <table class="table table-striped">
                 <thead>
                     <tr>

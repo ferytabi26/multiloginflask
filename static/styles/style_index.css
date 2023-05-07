@@ -48,7 +48,7 @@
 h2{
     text-align: center; 
     margin-top: 20px; 
-    background-color: deepskyblue;
+    background-color: #FF4B2B;
 }
 
 .arrow-button {
@@ -76,4 +76,8 @@ h2{
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid white;
+}
+
+.back{
+    background-color: #FF4B2B;
 }
