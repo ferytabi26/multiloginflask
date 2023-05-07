@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            a{
+                font-size:25px;
+                text-decoration:none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="" id="bg" style="margin:50px 100px; height:70%; width:50%;"/>
+        <div style="height:400px; width:350px; float:right; margin-right:100px">
+            <center>
+                <h1><span style="color:#5C5C5C;">Made by :</span><span style="color:#139442"> Fery Tabi</span></h1>
+                <h2>Surveillance Robot</h2><br> 
+                <button id="shutdown">Kill Me</button><br><br>
+                <a href="#" id="cam_up" >  &#x1F881;<br>CAM</a><br><br>                
+            </center>
+                <a href="#" id="cam_left" style="margin-left:40px;"> &#x1F880;CAM</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" id="cam_right" style="margin-left:50px;"> CAM &#x1F882;</a><br><br>
+            <center>
+                <a href="#" id="cam_down" > CAM<br> &#x1F883;</a><br><br>
+            </center>
+            <center>
+                <a href="#" id="up" >  &#x1F881;<br>FORWARD</a><br><br>
+            </center>
+                <a href="#" id="left" style="margin-left:30px;"> &#x1F880;LEFT</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" id="right" style="margin-left:50px;"> RIGHT &#x1F882;</a><br><br>
+            <center>
+                <a href="#" id="down" > BACKWARD<br> &#x1F883;</a>
+            </center>
+        </div>
+
+
+        <script>
+            $( document ).ready(function(){
+                $("#shutdown").on("click", function() {
+                    $.get('/shutdown');
+                });
+                $("#cam_up").on("mousedown", function() {
+                    $.get('/cam_up_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+
+                $("#cam_down").on("mousedown", function() {
+                    $.get('/cam_down_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+                
+                $("#cam_left").on("mousedown", function() {
+                    $.get('/cam_left_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+                
+                $("#cam_right").on("mousedown", function() {
+                    $.get('/cam_right_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+
+                $("#up").on("mousedown", function() {
+                    $.get('/up_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+
+                $("#down").on("mousedown", function() {
+                    $.get('/down_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+
+                $("#left").on("mousedown", function() {
+                    $.get('/left_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+                
+                $("#right").on("mousedown", function() {
+                    $.get('/right_side');
+                }).on('mouseup', function() {
+                    $.get('/stop');
+                });
+            });
+        </script>
+    </body>
+</html>

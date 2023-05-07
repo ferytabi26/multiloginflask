@@ -1,0 +1,52 @@
+#container1{
+    width: 830px;
+    background-color: #C9D8D2;
+    border-radius: 17px;
+    margin-top: 3px;
+    padding-bottom: 10px;
+}
+#console{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: #C9D8D2;
+}
+#logo_utama{
+    margin-top: 15px;
+}
+
+.glow-button {
+    text-decoration: none;
+    font-family: 'Arial';
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.8);
+    background: #4C5560;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.glow-button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(69, 134, 255, 0.4);
+}
+
+#button_cam{
+    width: 50px;
+    height: 50px;
+}
+
+#button_cam:hover{
+    box-shadow: 50px 50px 4px rgba(0,0,0,0.2);
+}
+h2{
+    text-align: center; 
+    margin-top: 20px; 
+    background-color: deepskyblue;
+}

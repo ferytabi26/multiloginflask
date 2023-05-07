@@ -1,0 +1,75 @@
+p{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-link{
+    font-size: 19px;
+}
+
+.nav-link active{
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.button-primary{
+    width: 122px;
+    height: auto;
+    background: #FF4B2B;
+    border: none;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+    text-align: center;
+    /* identical to box height */
+
+
+    color: #D9D9D9;
+}
+
+.gambar{
+    left: 700px;
+    top: 158px;
+}
+.hero{
+    height: 100vh;
+}
+.hero-tagline{
+    font-weight: 800;
+    font-size: 54;
+}
+.hero-span{
+    font-weight: 500;
+    font-size: 24;
+    line-height: 36px;
+}
+.button-lg-primary{
+    width: 194px;
+    height: 52px;
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+.judul{
+    width: 831px;
+    height: 162px;  
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+.foto-about{
+    width: auto;
+    height: 400px;
+}
+.gambar-about{
+    width: 400px;
+    height: 400px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
